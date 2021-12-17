@@ -1,0 +1,9 @@
+Tvorba envn Virtual environment v terminalu POWERSHELL
+py -m venv venv
+
+Při chybě PS scriptu - otevření virtual environment POWERSHELL
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+
+pywin32 missing win32gui
+py venv\Scripts\pywin32_postinstall.py -install
+
