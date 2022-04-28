@@ -21,7 +21,7 @@ class Vision:
         # converting screen to grayscale
         screen = cv.cvtColor(screenshot, cv.COLOR_RGB2GRAY)
         # finding white text (enemies)
-        ret, enemies = cv.threshold(screen, 252, 255, cv.THRESH_BINARY)
+        ret, enemies = cv.threshold(screen, 254, 255, cv.THRESH_BINARY)
         # forms a white bar in order to get the X and Y coordinates with the findContours and rectangle cv functions
         kernel = cv.getStructuringElement(cv.MORPH_RECT, (50, 5))
         enemies = cv.morphologyEx(enemies, cv.MORPH_CLOSE, kernel)
